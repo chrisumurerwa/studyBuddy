@@ -10,7 +10,6 @@ import 'package:study_scheduler/data/models/study_material.dart';
 import 'package:flutter/foundation.dart'; // Add this import for kDebugMode
 import 'package:study_scheduler/data/helpers/logger.dart';
 import 'package:flutter/material.dart'; // Add this import for TimeOfDay
-import 'package:intl/intl.dart';
 
 class DatabaseHelper {
   static final DatabaseHelper _instance = DatabaseHelper._internal();

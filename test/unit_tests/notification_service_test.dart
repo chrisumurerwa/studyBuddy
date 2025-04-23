@@ -24,8 +24,8 @@ void main() {
         notifyBefore: 0, // Should cause early return
         category: 'General',
         type: 'Reminder',
-        createdAt: DateTime.now(),
-        updatedAt: DateTime.now(), // Fixed issue
+        createdAt: DateTime.now().toIso8601String(),
+        updatedAt: DateTime.now().toIso8601String(), // Convert DateTime to String
       );
 
       expect(() => service.scheduleActivityNotification(activity), returnsNormally);
@@ -43,8 +43,8 @@ void main() {
         notifyBefore: 30,
         category: 'General',
         type: 'Reminder',
-        createdAt: DateTime.now(),
-        updatedAt: DateTime.now(), // Fixed issue
+        createdAt: DateTime.now().toIso8601String(),
+        updatedAt: DateTime.now().toIso8601String(), // Fixed issue
       );
 
       expect(() => service.scheduleActivityNotification(activity), returnsNormally);
